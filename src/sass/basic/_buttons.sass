@@ -7,3 +7,51 @@
 	white-space: nowrap
 	transition: 0.5s ease
 	cursor: pointer
+
+.button
+	font-size: 14px
+	line-height: 18px
+	color: $logo-second-color
+	background-color: $logo-base-color
+	text-decoration: none
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	min-height: 38px
+	padding: 10px 25px
+	border-radius: 3px
+	box-sizing: border-box
+	box-shadow: 0 2px 5px $button-shadow-color
+	&:hover,
+	&:focus
+		background-color: $logo-second-color
+		color: $logo-base-color
+		box-shadow: 0 2px 5px $button-shadow-color
+		transition: 0.7s
+		cursor: pointer
+
+	&:active
+		background-color: #ffffff
+		transform: translateY(2px)
+		box-shadow: none
+		outline: 1px solid $logo-second-color
+
+
+	&--feedback
+		border: none
+		margin-right: 20px
+		width: 100%
+
+	&--map
+		border: none
+
+	&--calendar
+		margin: 100px auto
+		display: block
+		width: 200px
+		text-align: center
+
+	&--reservation
+		border: none
+		width: 100%
+

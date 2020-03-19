@@ -1,6 +1,213 @@
-.header 
+.header
   display: block
-  
+
   //пример медиазапроса
   // @include bp($point-4)
   //   padding: 0 20px
+
+// --- header --- //
+
+.header
+	width: 100%
+	padding-top: 20px
+	padding-bottom: 20px
+	//outline: 1px solid $outline-test-color
+	&__wrapper
+		max-width: $site-width
+		box-sizing: border-box
+		margin: 0 auto
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__logo
+		margin-right: 100px
+
+.logo
+
+	&__img
+		width: 150px
+		height: auto
+		&:hover path
+			fill: $logo-base-color
+			transition: 1s
+
+.site-navigation
+	width: 100%
+	&__list
+		width: 100%
+		margin: 0
+		padding: 0
+		list-style: none
+		justify-content: space-between
+		display: flex
+		/*&--show
+		  position: absolute
+		  display: flex
+		  z-index: 1
+		  background-color: white*/
+
+	&__item
+		margin-right: 20px
+		margin-bottom: 30px
+
+	&__link
+		position: relative
+		text-decoration: none
+		text-transform: uppercase
+		font-weight: 700
+		font-size: 16px
+		color: $menu-color
+		&:hover:not(&--active)
+			color: $menu-hover-color
+			transition: 0.7s
+
+		&:active:not(&--active)
+			color: $menu-active-color
+
+		&:hover:not(&--active)::after
+			content: ""
+			position: absolute
+			bottom: -10px
+			width: 100%
+			height: 5px
+			display: block
+			background-color: $logo-second-color
+			animation: crawl-from-left 1s
+
+		&--active::after
+			content: ""
+			position: absolute
+			bottom: -10px
+			width: 100%
+			height: 5px
+			display: block
+			background-color: $logo-second-color
+
+.hamburger
+	position: absolute
+	top: 0
+	right: 0
+	width: 50px
+	height: 50px
+	display: none
+	&__box
+		margin: 0 auto
+		margin-top: 30px
+		width: 30px
+		height: 30px
+		position: relative
+
+	&__line
+		padding: 0
+		width: 30px
+		height: 4px
+		background-color: $logo-base-color
+		display: block
+		border-radius: 4px
+		transition: all 0.4s ease-in-out, transform 0.4s ease-in-out 0.4s
+		position: absolute
+		&--1
+			top: 0
+
+		&--2
+			top: 13.5px
+			width: 1px
+			transform: rotate(90deg)
+			left: 13.5px
+
+		&--3
+			top: 13.5px
+			width: 1px
+			left: 13.5px
+
+		&--4
+			top: 13.5px
+
+		&--5
+			bottom: 0
+
+	&__checkbox:checked + &__wrap &__box > &__line--1
+		top: 13.5px
+		background-color: transparent
+
+	&__checkbox:checked + &__wrap &__box > &__line--2
+		left: 0
+		width: 30px
+		transform: rotate(45deg)
+		background-color: $logo-second-color
+
+	&__checkbox:checked + &__wrap &__box > &__line--3
+		left: 0
+		width: 30px
+		transform: rotate(-45deg)
+		background-color: $logo-second-color
+
+	&__checkbox:checked + &__wrap &__box > &__line--4
+		background-color: transparent
+
+	&__checkbox:checked + &__wrap &__box > &__line--5
+		bottom: 13.5px
+		background-color: transparent
+
+
+@media (max-width: $screen-xl - 1) and (min-width: $screen-lg)
+	.header
+		&__logo
+			margin-right: 50px
+
+	.site-navigation
+		&__list
+			flex-wrap: wrap
+
+
+@media (max-width: $screen-lg - 1) and (min-width: $screen-md)
+	.header
+		&__logo
+			margin-right: 50px
+
+	.site-navigation
+		&__list
+			flex-wrap: wrap
+		&__item
+			min-width: 150px
+
+@media (max-width: $screen-md - 1) and (min-width: $screen-sm)
+	.header
+		&__wrapper
+			flex-direction: column
+		&__logo
+			margin-bottom: 50px
+			margin-right: 0
+	.site-navigation
+		&__list
+			flex-wrap: wrap
+			justify-content: space-around
+		&__item
+			min-width: 180px
+
+@media (max-width: $screen-sm - 1)
+	.header
+		&__wrapper
+			flex-direction: column
+		&__logo
+			margin-bottom: 50px
+			margin-right: 0
+
+	.site-navigation
+		&__hamburger
+			display: flex
+
+		&__list
+			flex-wrap: wrap
+			justify-content: space-around
+			display: none
+			&--show
+				position: absolute
+				display: flex
+				z-index: 1
+				background-color: white
+
+		&__item
+			min-width: 180px
+			margin-right: 0

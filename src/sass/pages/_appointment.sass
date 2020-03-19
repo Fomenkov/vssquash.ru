@@ -1,0 +1,282 @@
+.calendar
+	padding: 20px
+
+
+// --- / appointment-page --- //
+
+/* === services === */
+.appointment
+	padding-top: 10px
+	padding-bottom: 10px
+	margin-bottom: 40px
+	&__title
+		margin: 0 0 30px 0
+		font-size: 30px
+		font-weight: 400
+		line-height: 30px
+
+	&__description
+		line-height: 34px
+		margin-bottom: 40px
+
+	&__wrapper
+
+	&__radio
+		position: absolute
+
+
+
+/* === appointment__tabs ===*/
+
+.tabs
+	display: flex
+	justify-content: center
+	list-style: none
+	margin: 0
+	padding: 10px 0
+	&__button
+		padding: 10px 25px
+		margin: 0 20px
+		display: flex
+		font-size: 16px
+		font-weight: 700
+		line-height: 18px
+		min-height: 38px
+		border-radius: 3px
+		box-sizing: border-box
+		background-color: $logo-base-color
+		color: $logo-second-color
+		&:hover,
+		&:focus
+			cursor: pointer
+			background-color: $logo-second-color
+			color: $logo-base-color
+			box-shadow: 0 2px 5px $button-shadow-color
+			transition: 0.7s
+
+		&:active
+			background-color: #ffffff
+			transform: translateY(2px)
+			box-shadow: none
+			outline: 1px solid $logo-second-color
+
+
+
+
+
+.appointment__radio--calendar:checked ~ .appointment__tabs .tabs__button--calendar
+	background-color: $logo-second-color
+	color: $logo-base-color
+
+
+.appointment__radio--reservation:checked ~ .appointment__tabs .tabs__button--reservation
+	background-color: $logo-second-color
+	color: $logo-base-color
+
+
+.cards
+	list-style: none
+	margin: 0
+	padding: 50px 0
+	&__item
+		display: none
+		&--calendar
+
+		&--reservation
+
+
+	&__title
+		margin: 0 0 35px 0
+		font-size: 36px
+		font-weight: 400
+		line-height: 36px
+
+	&__text
+		margin: 0 0 30px 0
+		line-height: 24px
+
+
+
+.appointment__radio--calendar:checked ~ .appointment__cards .cards__item--calendar
+	display: block
+
+
+.appointment__radio--reservation:checked ~ .appointment__cards .cards__item--reservation
+	display: block
+
+
+.reservation
+	margin: 0 auto
+	padding: 40px
+	width: 90%
+	box-sizing: border-box
+	display: flex
+	justify-content: space-between
+	transition: box-shadow 1.5s
+	&:hover
+		box-shadow: 0 10px 25px $shadow-color
+	//outline: 1px solid #eaeaea
+
+	&__inputs-group
+		width: 47%
+		padding: 20px 40px
+		box-sizing: border-box
+
+		transition: box-shadow 1.5s
+
+
+
+
+
+.inputs-group
+	&:hover
+		//background-color: white
+		box-shadow: 0 0 15px $logo-base-color
+
+	&--player-level
+		background-color: $logo-base-color
+		color: $logo-second-color
+		border: none
+
+	&__title
+		&--player-level
+			margin-bottom: 40px
+
+
+	&__radio
+		&--child
+			&:checked ~ .inputs-group__radio-indicator--child
+				transition: 0.5s
+				background-color: $logo-second-color
+				color: $logo-base-color
+				font-weight: 700
+				box-shadow: inset 0 0 10px $logo-base-color
+
+
+		&--beginner
+			&:checked ~ .inputs-group__radio-indicator--beginner
+				transition: 0.5s
+				background-color: $logo-second-color
+				color: $logo-base-color
+				font-weight: 700
+				box-shadow: inset 0 0 10px $logo-base-color
+
+
+		&--middle
+			&:checked ~ .inputs-group__radio-indicator--middle
+				transition: 0.5s
+				background-color: $logo-second-color
+				color: $logo-base-color
+				font-weight: 700
+				box-shadow: inset 0 0 10px $logo-base-color
+
+
+		&--professional
+			&:checked ~ .inputs-group__radio-indicator--professional
+				transition: 0.5s
+				background-color: $logo-second-color
+				color: $logo-base-color
+				font-weight: 700
+				box-shadow: inset 0 0 10px $logo-base-color
+
+
+
+	&--training-data
+		//border-color: #eaeaea
+		border: none
+
+	&__radio-indicator
+		display: flex
+		align-items: center
+		padding: 10px 20px 10px 30px
+		width: 100%
+		height: 38px
+		font-size: 16px
+		box-sizing: border-box
+		outline: 1px solid $logo-second-color
+		margin-bottom: 40px
+		&:hover
+			cursor: pointer
+
+
+	&__text
+		width: 100%
+		height: 40px
+		margin-bottom: 30px
+		padding: 10px 20px
+		box-sizing: border-box
+		&--client-name
+			border-top: none
+			border-left: none
+			border-right: none
+			outline: none
+
+		&--client-email
+			border-top: none
+			border-left: none
+			border-right: none
+			outline: none
+
+		&--client-phone
+			border-top: none
+			border-left: none
+			border-right: none
+			outline: none
+
+		&--date
+			border-top: none
+			border-left: none
+			border-right: none
+			outline: none
+
+		&--client-message
+			height: 100px
+			resize: none
+
+
+
+
+// --- / appointment-page --- //
+@media (max-width: $screen-xl - 1) and (min-width: $screen-lg)
+	.reservation
+		width: 100%
+
+@media (max-width: $screen-lg - 1) and (min-width: $screen-md)
+	.reservation
+		width: 100%
+		padding-left: 20px
+		padding-right: 20px
+
+@media (max-width: $screen-md - 1) and (min-width: $screen-sm)
+	.reservation
+		flex-wrap: wrap
+		width: 100%
+		justify-content: center
+
+	.inputs-group
+		width: 80%
+		&--player-level
+			margin-bottom: 40px
+
+@media (max-width: $screen-sm - 1)
+	.tabs
+		flex-wrap: wrap
+		&__button
+			margin-bottom: 20px
+			width: 300px
+			justify-content: center
+
+	.reservation
+		flex-wrap: wrap
+		width: 100%
+		justify-content: center
+
+	.inputs-group
+		width: 80%
+		&:hover
+			box-shadow: none
+		&--player-level
+			margin-bottom: 40px
+
+	iframe .wk-dayname
+		white-space: normal

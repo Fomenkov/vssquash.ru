@@ -1,0 +1,117 @@
+.footer
+	color: $footer-text-color
+	background-color: $footer-bg-color
+	font-size: 14px
+	padding-top: 20px
+	padding-bottom: 10px
+	&__wrapper
+		max-width: $site-width
+		box-sizing: border-box
+		margin: 0 auto
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__slogan
+
+
+	&__slogan-logo
+		width: 600px
+		height: auto
+
+	&__contacts
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		height: 100px
+		align-items: center
+
+	&__club-name
+		font-weight: 700
+
+	&__phone
+		color: $footer-text-color
+		text-decoration: none
+
+	&__sponsor-link
+		display: block
+		margin-bottom: 10px
+
+	&__sponsor-logo
+		width: 100px
+		height: auto
+
+.developer
+	padding-top: 10px
+	border-top: 1px solid #fbb040
+	margin-top: 20px
+	text-align: center
+	&__title
+		color: #fbb040
+	&__link
+		color: white
+		text-decoration: none
+
+@media (max-width: $screen-xl - 1) and (min-width: $screen-lg)
+	.footer
+		&__slogan
+			margin-right: 20px
+
+		&__slogan-logo
+			width: 400px
+
+@media (max-width: $screen-lg - 1) and (min-width: $screen-md)
+	.footer
+		&__sponsor
+			display: flex
+			&-link
+				margin-right: 40px
+		&__wrapper
+			flex-wrap: wrap
+			justify-content: center
+		&__slogan
+			margin-bottom: 40px
+			width: 100%
+			text-align: center
+
+@media (max-width: $screen-md - 1) and (min-width: $screen-sm)
+	.footer
+		&__wrapper
+			flex-wrap: wrap
+			justify-content: space-around
+		&__slogan
+			margin-bottom: 40px
+			margin-right: 0
+			width: 100%
+			text-align: center
+			&-logo
+				width: 550px
+		&__sponsor
+			display: flex
+			flex-wrap: wrap
+			margin-bottom: 20px
+			&-link
+				margin-right: 40px
+		&__contacts
+			letter-spacing: 2px
+
+@media (max-width: $screen-sm - 1)
+	.footer
+		&__wrapper
+			flex-direction: column
+
+		&__slogan
+			margin-bottom: 40px
+			width: 100%
+		&__slogan-logo
+			width: 100%
+		&__sponsor
+			margin-bottom: 20px
+			display: flex
+			justify-content: space-around
+			width: 100%
+			flex-wrap: wrap
+			&-link
+				margin-right: 20px
+		&__contacts
+			letter-spacing: 1.5px

@@ -4,7 +4,7 @@
   box-sizing: border-box
 
 *::before,
-*::after 
+*::after
 	box-sizing: inherit
 
 html, :root
@@ -24,7 +24,7 @@ body
   display: flex
   flex-direction: column
   min-height: 100vh
-  width: 100% 
+  width: 100%
   overflow: hidden
 
 .main
@@ -33,16 +33,81 @@ body
 img
   max-width: 100%
 
-a 
-  text-decoration: none 
-  outline: none 
+a
+  text-decoration: none
+  outline: none
   color: inherit
 
 input,
-button, 
-select 
-  border: none 
-  background-color: transparent 
-  outline: none 
-  cursor: pointer 
+button,
+select
+  border: none
+  background-color: transparent
+  outline: none
+  cursor: pointer
 
+
+
+// --- global styles --- //
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden
+	position: absolute
+	width: 1px
+	height: 1px
+	margin: -1px
+	padding: 0
+	border: 0
+	white-space: nowrap
+	clip-path: inset(100%)
+	clip: rect(0 0 0 0)
+	overflow: hidden
+
+*
+	font-family: 'Comfortaa', Arial, cursive
+
+html, body
+	height: 100%
+
+.padding-site
+	padding-left: $padding-site
+	padding-right: $padding-site
+
+.container
+	display: flex
+	flex-direction: column
+	min-height: 100%
+
+.content
+	flex: 1
+
+.page-title
+	text-align: center
+	margin-bottom: 60px
+	position: relative
+	display: inline-block
+
+.main
+	max-width: $site-width
+	margin: 0 auto
+	box-sizing: border-box
+	&--feedback-page
+		padding-top: 40px
+		padding-bottom: 40px
+
+
+@media (max-width: $screen-lg - 1) and (min-width: $screen-md)
+	.padding-site
+		padding-left: $padding-site - $padding-difference
+		padding-right: $padding-site - $padding-difference
+
+@media (max-width: $screen-md - 1) and (min-width: $screen-sm)
+	.padding-site
+		padding-left: $padding-site - $padding-difference
+		padding-right: $padding-site - $padding-difference
+
+@media (max-width: $screen-sm - 1)
+	.padding-site
+		padding-left: $padding-site - $padding-difference
+		padding-right: $padding-site - $padding-difference

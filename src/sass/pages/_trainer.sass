@@ -1,0 +1,85 @@
+// --- trainer page --- //
+.trainer
+	&__wrapper
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		align-items: flex-start
+		padding-bottom: 40px
+		padding-top: 40px
+
+	&__photo
+		max-width: 100%
+		height: auto
+		margin-right: 40px
+		border-radius: 10px
+		transition: 1.5s
+		&:hover
+			box-shadow: 0 10px 25px $shadow-color
+			transform: scale(1.2)
+
+
+	&__info
+		max-width: 650px
+
+	&__name
+		position: relative
+		display: inline-block
+		margin-top: 0
+
+
+	&__rank
+		display: block
+		margin-bottom: 40px
+
+	&__text
+		line-height: 26px
+
+	&__button
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 40px
+		display: flex
+		width: 200px
+
+
+
+// --- / trainer page --- //
+
+@media (max-width: $screen-xl - 1) and (min-width: $screen-lg)
+	.trainer
+		&__wrapper
+			justify-content: space-around
+			align-items: center
+
+		&__info
+			max-width: 450px
+
+@media (max-width: $screen-lg - 1) and (min-width: $screen-md)
+	.trainer
+		&__photo
+			margin-right: auto
+			margin-bottom: 60px
+			margin-left: auto
+		&__info
+			max-width: 100%
+
+@media (max-width: $screen-md - 1) and (min-width: $screen-sm)
+	.trainer
+		&__photo
+			margin-right: auto
+			margin-bottom: 60px
+			margin-left: auto
+		&__info
+			max-width: 100%
+
+@media (max-width: $screen-sm - 1)
+	.trainer
+		&__photo
+			margin-right: auto
+			margin-bottom: 60px
+			margin-left: auto
+			&:hover
+				transform: none
+		&__info
+			max-width: 100%

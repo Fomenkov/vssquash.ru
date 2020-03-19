@@ -1,0 +1,103 @@
+// --- services page --- //
+.services
+	&__list
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+		margin: 0
+		padding: 20px 0
+		list-style: none
+
+	&__service-card
+
+.service-card
+
+	//temp
+	position: relative
+	margin-bottom: 40px
+	width: 440px
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: flex-end
+	border: 1px solid #eaeaea
+	background-color: #ffffff
+	transition: box-shadow 0.5s
+	overflow: hidden
+	&--action
+		&::after
+			color: #FFFFFF
+			content: "Акция"
+			letter-spacing: 1px
+			width: 130px
+			height: 30px
+			display: flex
+			position: absolute
+			top: 10px
+			right: -40px
+			background-color: #ee3643
+			transform: rotate(45deg)
+			justify-content: center
+			align-items: center
+
+
+	&:hover
+		box-shadow: 0 10px 25px $shadow-color
+
+
+	&__image
+
+	&__hover
+		padding: 40px
+		box-sizing: border-box
+		position: absolute
+		bottom: 0
+		z-index: 2
+		background-color: $logo-second-color
+		opacity: 0
+		width: 100%
+		height: 320px
+
+		&-title
+			display: block
+			margin-bottom: 10px
+			text-align: center
+
+		&-list
+			margin-bottom: 20px
+			margin-left: auto
+			margin-right: auto
+
+		&-comment
+			text-align: center
+
+
+	&:hover .service-card__hover
+		opacity: 0.9
+		transition: opacity 1.5s
+
+
+	&__title
+		color: $logo-base-color
+		font-size: 26px
+		font-weight: 700
+		line-height: 30px
+		text-align: center
+		padding: 0 20px
+
+	&__comment
+		margin-bottom: 20px
+		color: #a9a9a9
+		font-size: 17px
+		font-weight: 700
+		line-height: 18px
+
+	&__button
+		&--booking
+			margin-bottom: 20px
+
+// --- / services page --- //
+
+@media (max-width: $screen-xl - 1) and (min-width: $screen-lg)
+	.service-card
+		width: 390px

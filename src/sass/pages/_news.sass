@@ -1,0 +1,105 @@
+// --- news-page --- //
+.news
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	margin-bottom: 50px
+	&__item
+		//outline: 1px solid red
+		border: 1px solid #eaeaea
+		padding: 20px
+		margin-bottom: 20px
+		width: 44%
+		&:hover
+			box-shadow: 0 10px 25px #262262
+			transition: 1s
+
+
+	&__title
+		text-align: center
+
+	&__image
+		max-width: 100%
+		margin-bottom: 20px
+		display: block
+		margin-left: auto
+		margin-right: auto
+
+	&__text
+		margin-bottom: 40px
+
+	&__button
+		margin-bottom: 20px
+		margin-left: auto
+		margin-right: auto
+		display: flex
+		width: 200px
+
+	&__time
+		display: block
+		margin-bottom: 10px
+		&--single
+			margin-top: 40px
+
+
+	&__author
+		display: block
+		margin-bottom: 10px
+
+	&__category
+		&-link
+
+
+
+
+
+.single-news
+	margin-bottom: 50px
+
+
+.pagination
+	margin-bottom: 20px
+
+.nav-links
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+
+
+
+.page-numbers
+	padding: 10px 20px
+	margin-bottom: 20px
+	margin-right: 10px
+	text-decoration: none
+	color: $logo-second-color
+	background-color: $logo-base-color
+	transition: color, background-color 1s
+	&:hover
+		color: $logo-base-color
+		background-color: $logo-second-color
+
+	&.current
+		color: $logo-base-color
+		background-color: $logo-second-color
+
+
+// --- / news-page --- //
+
+@media (max-width: $screen-lg - 1) and (min-width: $screen-md)
+	.news
+		&__item
+			width: 43%
+
+@media (max-width: $screen-md - 1) and (min-width: $screen-sm)
+	.news
+		justify-content: center
+		&__item
+			width: 80%
+
+@media (max-width: $screen-sm - 1)
+	.news
+		justify-content: center
+		&__item
+			width: 100%
+
