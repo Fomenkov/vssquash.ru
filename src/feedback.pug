@@ -4,5 +4,31 @@ append vars
 	- title = 'Обратная связь'
 
 block content
-	.padding-site
-		h1.index__headline Обратная связь
+	.main--feedback-page.padding-site
+		form.feedback(action="https://htmlacademy.ru/echo" method="post")
+			.feedback__contacts-box
+				h2.feedback__title.feedback__title--contacts Контакты:
+				b.feedback__company-name Гольф-клуб "Крылатское"
+				address.feedback__contact.feedback__contact--address
+					a.feedback__contact--address__link(href="https://yandex.ru/maps/-/CGVhvEzk" target="_blank" title="Открыть в Яндекс Картах") г. Москва, ул. Островная, д. 2
+
+				a.feedback__contact.feedback__contact--phone-trainer(href="tel:+79163563377") +7 (916) 356-33 - 77 - тренер
+				a.feedback__contact.feedback__contact--phone-pass(href="tel:+74952347451") +7 (495) 234-74 - 51 - пропуск
+				a.feedback__contact.feedback__contact--email(href="mailto:vadimendeavour@gmail.com") vadimendeavour<wbr>@gmail.com
+				ul.social.feedback__social-list
+					li.social__item
+						a.social__link(href="#")
+							img.social__icon(src="images/icon-vk.svg" alt="Я Вконтакте")
+					li.social__item
+						a.social__link(href="https://www.facebook.com/vadim.endeavour" target="_blank")
+							img.social__icon(src="images/icon-facebook.svg" alt="Я в Facebook")
+					li.social__item
+						a.social__link(href="#")
+							img.social__icon(src="images/icon-instagram.svg" alt="Мой Instagram")
+
+			fieldset.feedback__write-us
+				h2.feedback__title.feedback__title--write-us Напишите мне:
+				input.feedback__input.feedback__input--client-name(type="text" placeholder="Ваше имя" name="client-name" required)
+				input.feedback__input.feedback__input--client-email(type="email" placeholder="E-mail" name="client-email" required)
+				textarea.feedback__input.feedback__input--client-message(placeholder="Ваше сообщение" name="client-message" id="" rows="5" required)
+				button.button.button--feedback.feedback__button(type="submit") Отправить

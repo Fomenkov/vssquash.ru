@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Обратная связь
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1584893215781">
+    <link rel="stylesheet" href="css/main.css?v=1584897687667">
   </head>
   <body>
     <div class="page">
@@ -59,8 +59,25 @@
         </div>
       </header>
       <main class="main" id="main">
-        <div class="padding-site">
-          <h1 class="index__headline">Обратная связь</h1>
+        <div class="main--feedback-page padding-site">
+          <form class="feedback" action="https://htmlacademy.ru/echo" method="post">
+            <div class="feedback__contacts-box">
+              <h2 class="feedback__title feedback__title--contacts">Контакты:</h2><b class="feedback__company-name">Гольф-клуб "Крылатское"</b>
+              <address class="feedback__contact feedback__contact--address"><a class="feedback__contact--address__link" href="https://yandex.ru/maps/-/CGVhvEzk" target="_blank" title="Открыть в Яндекс Картах">г. Москва, ул. Островная, д. 2</a></address><a class="feedback__contact feedback__contact--phone-trainer" href="tel:+79163563377">+7 (916) 356-33 - 77 - тренер</a><a class="feedback__contact feedback__contact--phone-pass" href="tel:+74952347451">+7 (495) 234-74 - 51 - пропуск</a><a class="feedback__contact feedback__contact--email" href="mailto:vadimendeavour@gmail.com">vadimendeavour<wbr>@gmail.com</a>
+              <ul class="social feedback__social-list">
+                <li class="social__item"><a class="social__link" href="#"><img class="social__icon" src="images/icon-vk.svg" alt="Я Вконтакте"></a></li>
+                <li class="social__item"><a class="social__link" href="https://www.facebook.com/vadim.endeavour" target="_blank"><img class="social__icon" src="images/icon-facebook.svg" alt="Я в Facebook"></a></li>
+                <li class="social__item"><a class="social__link" href="#"><img class="social__icon" src="images/icon-instagram.svg" alt="Мой Instagram"></a></li>
+              </ul>
+            </div>
+            <fieldset class="feedback__write-us">
+              <h2 class="feedback__title feedback__title--write-us">Напишите мне:</h2>
+              <input class="feedback__input feedback__input--client-name" type="text" placeholder="Ваше имя" name="client-name" required>
+              <input class="feedback__input feedback__input--client-email" type="email" placeholder="E-mail" name="client-email" required>
+              <textarea class="feedback__input feedback__input--client-message" placeholder="Ваше сообщение" name="client-message" id="" rows="5" required></textarea>
+              <button class="button button--feedback feedback__button" type="submit">Отправить</button>
+            </fieldset>
+          </form>
         </div>
       </main>
       <footer class="footer">
@@ -69,8 +86,8 @@
         </div>
         <div class="developer"><span class="developer__title">Разработка сайта:</span><a class="developer__link" href="https://webalex.su" target="_blank">WebAlex</a></div>
       </footer>
-      <script src="js/vendor.js?v=1584893215781"></script>
-      <script src="js/main.js?v=1584893215781"></script>
+      <script src="js/vendor.js?v=1584897687667"></script>
+      <script src="js/main.js?v=1584897687667"></script>
     </div>
   </body>
 </html>
