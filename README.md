@@ -2,4 +2,4 @@
 
 <b>Состояние:</b> в разработке
 
-https://fomenkov.github.io/vsquash/
+https://fomenkov.github.io/vssquash.ru/build/main
