@@ -1,21 +1,21 @@
 // --- services page --- //
 .services
+	padding-top: 40px
+	padding-bottom: 40px
 	&__list
 		display: flex
 		flex-wrap: wrap
-		justify-content: space-around
+		justify-content: space-between
 		margin: 0
 		padding: 20px 0
 		list-style: none
 
-	&__service-card
+	&__card
 
 .service-card
-
-	//temp
 	position: relative
-	margin-bottom: 40px
-	width: 440px
+	margin-bottom: 20px
+	width: calc(25% - 15px)
 	display: flex
 	flex-direction: column
 	align-items: center
@@ -40,15 +40,13 @@
 			justify-content: center
 			align-items: center
 
-
 	&:hover
 		box-shadow: 0 10px 25px $shadow-color
 
 
-	&__image
-
 	&__hover
-		padding: 40px
+		//padding: 40px
+		padding: 25px 10px
 		box-sizing: border-box
 		position: absolute
 		bottom: 0
@@ -56,7 +54,9 @@
 		background-color: $logo-second-color
 		opacity: 0
 		width: 100%
-		height: 320px
+		//height: 320px
+		min-height: 216px
+		max-height: 250px
 
 		&-title
 			display: block
@@ -64,9 +64,10 @@
 			text-align: center
 
 		&-list
-			margin-bottom: 20px
 			margin-left: auto
 			margin-right: auto
+			&--price
+				margin-bottom: 20px
 
 		&-comment
 			text-align: center
@@ -79,11 +80,12 @@
 
 	&__title
 		color: $logo-base-color
-		font-size: 26px
+		font-size: 24px
 		font-weight: 700
 		line-height: 30px
 		text-align: center
 		padding: 0 20px
+		margin: 30px 0
 
 	&__comment
 		margin-bottom: 20px
@@ -94,10 +96,22 @@
 
 	&__button
 		&--booking
-			margin-bottom: 20px
+			margin-bottom: 50px
 
-// --- / services page --- //
+@include bp($point-5)
+	.service-card
+		width: calc(33% - 10px)
 
-@media (max-width: $screen-xl - 1) and (min-width: $screen-lg)
+@include bp($point-4)
+	.service-card
+		width: calc(50% - 10px)
+
+@include bp(600px)
+	.service-card
+		width: 100%
+
+//@media (max-width: $screen-xl - 1) and (min-width: $screen-lg)
 	.service-card
 		width: 390px
+
+// --- / services page --- //

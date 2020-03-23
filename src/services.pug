@@ -4,10 +4,10 @@ append vars
 	- title = 'Услуги'
 
 block content
-	.services.main.main--services.padding-site
+	.services.wrapper
 		h1.page-title.crawl-from-left Виды тренировок
 		ul.services__list
-			li.service-card.service-card--action.services__service-card
+			li.service-card.service-card--action
 				.service-card__hover
 					b.service-card__hover-title Первые 3 тренировки:
 					ul.service-card__hover-list.service-card__hover-list--price
@@ -22,11 +22,11 @@ block content
 						li Инвентарь
 
 				h2.service-card__title Начальный уровень
-				span.service-card__comment Место еще не определено
+				//span.service-card__comment Место еще не определено
 				a.button.button--booking.service-card__button--booking(href="appointment.html") Оставить заявку
 				img.service-card__image(src="images/services-starter.jpg" alt="Начальный уровень игры в сквош")
 
-			li.service-card.services__service-card
+			li.service-card
 				.service-card__hover
 					b.service-card__hover-title Oт 1650 руб. час
 					b.service-card__hover-title В стоимость входят:
@@ -35,16 +35,15 @@ block content
 						li Услуги тренера
 						li Инвентарь
 					p.service-card__hover-comment
-						span Подробнее в разделе
-						a(href="price.html") Прайс-лист
+						span Подробнее в разделе #[a(href="price.html") Прайс-лист]
 
 				h2.service-card__title Детские тренировки
-				span.service-card__comment Место еще не определено
+				//span.service-card__comment Место еще не определено
 				a.button.button--booking.service-card__button--booking(href="appointment.html") Оставить заявку
 				img.service-card__image(src="images/services-kids.jpg" alt="Начальный уровень игры в сквош")
 
 
-			li.service-card.services__service-card
+			li.service-card
 				.service-card__hover
 					b.service-card__hover-title Oт 2150 руб. час
 					b.service-card__hover-title В стоимость входят:
@@ -54,17 +53,16 @@ block content
 						li Инвентарь
 
 					p.service-card__hover-comment
-						span Подробнее в разделе
-						a(href="price.html") Прайс-лист
+						span Подробнее в разделе #[a(href="price.html") Прайс-лист]
 
 
 				h2.service-card__title Любитель
-				span.service-card__comment Место еще не определено
+				//span.service-card__comment Место еще не определено
 				a.button.button--booking.service-card__button--booking(href="appointment.html") Оставить заявку
 				img.service-card__image(src="images/services-common.jpg" alt="Начальный уровень игры в сквош")
 
 
-			li.service-card.services__service-card
+			li.service-card
 				.service-card__hover
 					b.service-card__hover-title Oт 2150 руб. час
 					b.service-card__hover-title В стоимость входят:
@@ -74,10 +72,9 @@ block content
 						li Инвентарь
 
 					p.service-card__hover-comment
-						span Подробнее в разделе
-						a(href="price.html") Прайс-лист
+						span Подробнее в разделе #[a(href="price.html") Прайс-лист]
 
 				h2.service-card__title Про<wbr>дви<wbr>ну<wbr>тый игрок
-				span.service-card__comment Место еще не определено
+				//span.service-card__comment Место еще не определено
 				a.button.button--booking.service-card__button--booking(href="appointment.html") Оставить заявку
 				img.service-card__image(src="images/services-profi.jpg" alt="Начальный уровень игры в сквош")

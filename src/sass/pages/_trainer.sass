@@ -2,7 +2,7 @@
 .trainer
 	&__wrapper
 		display: flex
-		flex-wrap: wrap
+		//flex-wrap: wrap
 		justify-content: space-between
 		align-items: flex-start
 		padding-bottom: 40px
@@ -20,7 +20,7 @@
 
 
 	&__info
-		max-width: 650px
+		max-width: 850px
 
 	&__name
 		position: relative
@@ -42,11 +42,25 @@
 		display: flex
 		width: 200px
 
+	@include bp(1300px)
+		&__photo
+			&:hover
+				transform: scale(1.1)
+
+	@include bp($point-4)
+		&__wrapper
+			flex-wrap: wrap
+		&__photo
+			margin: 0 auto 50px
+
+	@include bp($point-2)
+		&__photo
+			&:hover
+				transform: scale(1.05)
 
 
-// --- / trainer page --- //
 
-@media (max-width: $screen-xl - 1) and (min-width: $screen-lg)
+//@media (max-width: $screen-xl - 1) and (min-width: $screen-lg)
 	.trainer
 		&__wrapper
 			justify-content: space-around
@@ -55,7 +69,7 @@
 		&__info
 			max-width: 450px
 
-@media (max-width: $screen-lg - 1) and (min-width: $screen-md)
+//@media (max-width: $screen-lg - 1) and (min-width: $screen-md)
 	.trainer
 		&__photo
 			margin-right: auto
@@ -64,7 +78,7 @@
 		&__info
 			max-width: 100%
 
-@media (max-width: $screen-md - 1) and (min-width: $screen-sm)
+//@media (max-width: $screen-md - 1) and (min-width: $screen-sm)
 	.trainer
 		&__photo
 			margin-right: auto
@@ -73,7 +87,7 @@
 		&__info
 			max-width: 100%
 
-@media (max-width: $screen-sm - 1)
+//@media (max-width: $screen-sm - 1)
 	.trainer
 		&__photo
 			margin-right: auto
@@ -83,3 +97,5 @@
 				transform: none
 		&__info
 			max-width: 100%
+
+// --- / trainer page --- //

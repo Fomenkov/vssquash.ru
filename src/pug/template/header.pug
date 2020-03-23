@@ -1,6 +1,6 @@
 header.header
-	.header__wrapper.padding-site
-		a(href="#").logo.header__logo
+	.wrapper
+		a(href="main.html").logo.header__logo
 			svg.logo__img(preserveAspectRatio="xMidYMid meet" data-bbox="10.89 33 293.77 248.904" viewBox="10.89 33 293.77 248.904" xmlns="http://www.w3.org/2000/svg" data-type="color" role="img")
 				g
 					path( d="M46.9 136.83a115 115 0 0 1 226.23 0h9.61C272.88 78 221.62 33 160 33S47.15 78 37.3 136.83z"	fill="#262262" data-color="1")
@@ -39,8 +39,6 @@ header.header
 
 			ul.site-navigation__list
 				li.site-navigation__item
-					a.site-navigation__link.site-navigation__link--active(href="main.html") Главная
-				li.site-navigation__item
 					a.site-navigation__link( href="news.html") Новости
 				li.site-navigation__item
 					a.site-navigation__link( href="trainer.html") Тренер
@@ -49,6 +47,21 @@ header.header
 				li.site-navigation__item
 					a.site-navigation__link( href="price.html") Прайс-лист
 				li.site-navigation__item
+					a.site-navigation__link( href="clubs.html") Клубы
+
+					//ul.site-navigation__sublist
+						li.site-navigation__subitem
+							a.link( href="news.html") Первый клуб
+						li.site-navigation__subitem
+							a.link( href="news.html") Второй клуб
+						li.site-navigation__subitem
+							a.link( href="news.html") Третий клуб
+						li.site-navigation__subitem
+							a.link( href="news.html") Четвёртый клуб
+
+				li.site-navigation__item
 					a.site-navigation__link( href="appointment.html") Запись
+				li.site-navigation__item
+					a.site-navigation__link( href="partners.html") Партнёры
 				li.site-navigation__item
 					a.site-navigation__link( href="feedback.html") Обратная связь
