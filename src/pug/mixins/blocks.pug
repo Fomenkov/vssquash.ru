@@ -1,0 +1,16 @@
+mixin newsItem(title,image,text,date,author,category)
+	article.news__item
+		h2.news__title=title
+		img.news__image(src= image alt="Новости сквоша")
+		a.news__button.button.button--news(href="#") Читать новость
+		p.news__text=text
+		time.news__time(datetime="2019-09-01T10-24")=date
+		//cite.news__author=author
+		//span.news__category Категория: #[a.news__category-link(href="#")=category]
+
+mixin clubsItem(title,image,text)
+	article.clubs__item
+		h2.clubs__title=title
+		.clubs__image
+			img(src= image alt="Сквош-клуб")
+		a.clubs__button.button.button--clubs(href="#") Подробнее

@@ -4,5 +4,10 @@ append vars
 	- title = 'Клубы'
 
 block content
-	.padding-site
-		h1.index__headline Клубы
+	.wrapper
+		h1.page-title Скваш-клубы Москвы
+		section.clubs
+			+clubsItem('ARVY Sport&Beauty в Саларьево','images/club-arvy.jpg')
+			+clubsItem('City Squash на Соколе','images/club-citysquash.jpg')
+			+clubsItem('МультиСпорт в Лужниках','images/club-multisport.jpg')
+			+clubsItem('Московский Гольф Клуб в Крылатском','images/club-golf.jpg')

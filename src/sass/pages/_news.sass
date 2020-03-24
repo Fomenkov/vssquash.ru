@@ -2,14 +2,15 @@
 .news
 	display: flex
 	flex-wrap: wrap
-	justify-content: space-between
-	margin-bottom: 50px
+	//justify-content: space-between
+	margin: 0 -10px 50px
+
 	&__item
-		//outline: 1px solid red
 		border: 1px solid #eaeaea
 		padding: 20px
-		margin-bottom: 20px
-		width: 44%
+		margin: 0 10px 20px
+		//width: 44%
+		width: calc(33.33% - 20px)
 		&:hover
 			box-shadow: 0 10px 25px #262262
 			transition: 1s
@@ -49,6 +50,18 @@
 	&__category
 		&-link
 
+	@include bp($point-4)
+		&__item
+			margin: 0 10px 20px
+			width: calc(50% - 20px)
+
+	@include bp(700px)
+		margin: 0 0 50px
+		&__item
+			margin: 0 0 20px
+			width: 100%
+
+
 
 
 
@@ -68,6 +81,7 @@
 
 
 .page-numbers
+	border-radius: 10px
 	padding: 10px 20px
 	margin-bottom: 20px
 	margin-right: 10px
@@ -85,21 +99,3 @@
 
 
 // --- / news-page --- //
-
-@media (max-width: $screen-lg - 1) and (min-width: $screen-md)
-	.news
-		&__item
-			width: 43%
-
-@media (max-width: $screen-md - 1) and (min-width: $screen-sm)
-	.news
-		justify-content: center
-		&__item
-			width: 80%
-
-@media (max-width: $screen-sm - 1)
-	.news
-		justify-content: center
-		&__item
-			width: 100%
-
