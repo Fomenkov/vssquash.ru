@@ -1,2 +1,2 @@
-!function(){"use strict";var t=document.querySelector(".hamburger__wrap"),e=document.querySelector(".site-navigation__list");t.addEventListener("click",function(){e.classList.toggle("site-navigation__list--show")})}();
+!function(){"use strict";var e=document.querySelector(".hamburger__wrap"),t=document.querySelector(".site-navigation__list");e.addEventListener("click",function(){t.classList.toggle("site-navigation__list--show")}),$(function(){var e=$(".js-gallery-large");$(".js-gallery-picture").on("click",function(t){t.preventDefault();var i=$(this).children(".img").attr("src");return e.children(".img").attr("src",i),e.children(".img").addClass("fade"),setTimeout(function(){e.children(".img").removeClass("fade")},500),!1})})}();
 //# sourceMappingURL=main.js.map

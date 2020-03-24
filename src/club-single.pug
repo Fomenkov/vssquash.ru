@@ -1,0 +1,27 @@
+extends pug/base
+
+append vars
+	- title = 'Клубы'
+
+block content
+	.wrapper
+		article.club
+			h1.page-title ARVY Sport&Beauty в Саларьево
+			section.club__images
+				.club__images-large.js-gallery-large
+					img.img(src='images/club-arvy.jpg' alt='Сквош-клуб')
+				.club__images-grid
+					.club__images-grid-picture.js-gallery-picture
+						img.img(src='images/club-arvy.jpg' alt='Сквош-клуб')
+					.club__images-grid-picture.js-gallery-picture
+						img.img(src='images/club-citysquash.jpg' alt='Сквош-клуб')
+					.club__images-grid-picture.js-gallery-picture
+						img.img(src='images/club-golf.jpg' alt='Сквош-клуб')
+					.club__images-grid-picture.js-gallery-picture
+						img.img(src='images/club-multisport.jpg' alt='Сквош-клуб')
+					.club__images-grid-picture.js-gallery-picture
+						img.img(src='images/club-arvy.jpg' alt='Сквош-клуб')
+					.club__images-grid-picture.js-gallery-picture
+						img.img(src='images/club-citysquash.jpg' alt='Сквош-клуб')
+					.club__images-grid-picture.js-gallery-picture
+						img.img(src='images/club-golf.jpg' alt='Сквош-клуб')
