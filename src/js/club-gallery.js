@@ -1,20 +1,20 @@
 // --- Club page photo gallery --- //
 
-$(function () {
-	let $large = $('.js-gallery-large');
-	let $pic = $('.js-gallery-picture');
+window.onload = function () {
+	let largeImg = document.querySelector('.js-large-img');
+	let gallery = document.querySelectorAll('.js-gallery-picture');
 
-	$pic.on('click',function(e){
-		e.preventDefault();
-		let $this = $(this);
-		let target = $this.children('.img').attr('src');
-		$large.children('.img').attr('src', target);
-		$large.children('.img').addClass('fade');
-		setTimeout(function () {
-			$large.children('.img').removeClass('fade');
-		}, 500);
-		return false
-	});
-});
+	for ( let i = 0; i < gallery.length; i++){
+		let galleryImg = gallery[i];
+		galleryImg.addEventListener("click", function () {
+			let source = galleryImg.getAttribute('src');
+			largeImg.setAttribute('src', source);
+			largeImg.classList.add('fade');
+			setTimeout(function () {
+				largeImg.classList.remove('fade');
+			}, 500);
+		});
+	}
+};
 
 // --- / Club page photo gallery --- //
