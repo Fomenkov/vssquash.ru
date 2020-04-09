@@ -7,6 +7,89 @@ block content
 	//.padding-site
 	.wrapper
 		h1.page-title.crawl-from-left Стоимость тренировок
+		br
+		section.calculator
+			h2.page-title.crawl-from-left Калькулятор
+			form
+				fieldset#block-club
+					.overlay
+					h3 Клуб
+					.inner
+						label
+							input(type='radio' name='club' value='golf')
+							span Гольф
+						label
+							input(type='radio' name='club' value='arvy')
+							span ARVY
+						label
+							input(type='radio' name='club' value='city')
+							span City
+						label
+							input(type='radio' name='club' value='multisport')
+							span Мультиспорт
+
+				fieldset#block-day.hidden
+					.overlay
+					h3 День/Время
+					.inner
+						label
+							input(type='radio' name='day' value='weekday')
+							span Будни 9-17
+						label
+							input(type='radio' name='day' value='weekend')
+							span Будни 17-22 / Выходные&nbsp;9-22
+
+				fieldset#block-age.hidden
+					.overlay
+					h3 Возраст
+					.inner
+						label
+							input(type='radio' name='age' value='adults')
+							span Взрослые
+						label
+							input(type='radio' name='age' value='children')
+							span Дети
+
+				fieldset#block-duration.hidden
+					.overlay
+					h3 Длительность
+					.inner
+						label
+							input(type='radio' name='duration' value='one-hour')
+							span 1 час
+						label
+							input(type='radio' name='duration' value='two-hours')
+							span 2 часа
+
+				fieldset#block-players.hidden
+					.overlay
+					h3 Количество игроков
+					.inner
+						label
+							input(type='radio' name='players' value='one-player')
+							span 1 игрок
+						label
+							input(type='radio' name='players' value='two-players')
+							span 2 игрока
+						label
+							input(type='radio' name='players' value='three-players')
+							span 3 игрока
+						//label
+							input(type='radio' name='players' value='four-players')
+							span 4-6 игроков
+
+				fieldset
+					.price-wrap Стоимость тренировки: #[span.price.js-price 0]&nbsp;рублей
+				button#reset.button(type='reset') Рассчитать заново
+
+		br
+		br
+
+
+
+
+
+
 		.price__wrapper-outside
 			table.price
 				tr.price__row.price__row--table-title

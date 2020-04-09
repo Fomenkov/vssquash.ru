@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Прайс-лист
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1585752402798">
+    <link rel="stylesheet" href="css/main.css?v=1586448181891">
   </head>
   <body>
     <div class="page">
@@ -72,7 +72,90 @@
       <main class="main" id="main">
         <!--.padding-site-->
         <div class="wrapper">
-          <h1 class="page-title crawl-from-left">Стоимость тренировок</h1>
+          <h1 class="page-title crawl-from-left">Стоимость тренировок</h1><br>
+          <section class="calculator">
+            <h2 class="page-title crawl-from-left">Калькулятор</h2>
+            <form>
+              <fieldset id="block-club">
+                <div class="overlay"></div>
+                <h3>Клуб</h3>
+                <div class="inner">
+                  <label>
+                    <input type="radio" name="club" value="golf"><span>Гольф</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="club" value="arvy"><span>ARVY</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="club" value="city"><span>City</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="club" value="multisport"><span>Мультиспорт</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset class="hidden" id="block-day">
+                <div class="overlay"></div>
+                <h3>День/Время</h3>
+                <div class="inner">
+                  <label>
+                    <input type="radio" name="day" value="weekday"><span>Будни 9-17</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="day" value="weekend"><span>Будни 17-22 / Выходные&nbsp;9-22</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset class="hidden" id="block-age">
+                <div class="overlay"></div>
+                <h3>Возраст</h3>
+                <div class="inner">
+                  <label>
+                    <input type="radio" name="age" value="adults"><span>Взрослые</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="age" value="children"><span>Дети</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset class="hidden" id="block-duration">
+                <div class="overlay"></div>
+                <h3>Длительность</h3>
+                <div class="inner">
+                  <label>
+                    <input type="radio" name="duration" value="one-hour"><span>1 час</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="duration" value="two-hours"><span>2 часа</span>
+                  </label>
+                </div>
+              </fieldset>
+              <fieldset class="hidden" id="block-players">
+                <div class="overlay"></div>
+                <h3>Количество игроков</h3>
+                <div class="inner">
+                  <label>
+                    <input type="radio" name="players" value="one-player"><span>1 игрок</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="players" value="two-players"><span>2 игрока</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="players" value="three-players"><span>3 игрока</span>
+                  </label>
+                  <!--label
+                  input(type='radio' name='players' value='four-players')
+                  span 4-6 игроков
+                  
+                  -->
+                </div>
+              </fieldset>
+              <fieldset>
+                <div class="price-wrap">Стоимость тренировки: <span class="price js-price">0</span>&nbsp;рублей</div>
+              </fieldset>
+              <button class="button" id="reset" type="reset">Рассчитать заново</button>
+            </form>
+          </section><br><br>
           <div class="price__wrapper-outside">
             <table class="price">
               <tr class="price__row price__row--table-title">
@@ -175,8 +258,8 @@
         </div>
         <div class="developer"><span class="developer__title">Разработка сайта:</span><a class="developer__link" href="https://webalex.su" target="_blank">WebAlex</a></div>
       </footer>
-      <script src="js/vendor.js?v=1585752402798"></script>
-      <script src="js/main.js?v=1585752402798"></script>
+      <script src="js/vendor.js?v=1586448181891"></script>
+      <script src="js/main.js?v=1586448181891"></script>
     </div>
   </body>
 </html>

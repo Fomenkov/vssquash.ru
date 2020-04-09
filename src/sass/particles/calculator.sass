@@ -1,0 +1,73 @@
+// --- calculator --- //
+
+.calculator
+	fieldset
+		display: flex
+		position: relative
+		border-radius: 20px
+		margin-bottom: 20px
+		padding: 10px 20px
+		input
+			display: none
+
+	.blocked
+		.overlay
+			position: absolute
+			background-color: $white
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			opacity: 0.3
+			z-index: 10
+			transition: 1s
+
+	.inner
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+	label
+		margin-bottom: 20px
+		text-align: center
+		line-height: 20px
+		border-radius: 20px
+		padding: 15px 20px
+		color: #fbb040
+		font-weight: 600
+		background-color: #262262
+		width: calc(50% - 10px)
+		transition: 0.5s
+
+		&.active
+			color: #262262
+			background-color: #fbb040
+		&.disabled
+			background-color: #999999
+			color: #262262
+		&:hover:not(.disabled)
+			cursor: pointer
+			color: #262262
+			background-color: #fbb040
+			box-shadow: 0 0 10px 0 #262262
+
+	.button
+		display: block
+		margin-left: auto
+		margin-right: auto
+
+	.price-wrap
+		text-align: center
+		font-weight: 600
+		line-height: 25px
+		.price
+			color: red
+
+	.hidden
+		display: none
+
+	@include bp($point-3)
+		label
+			width: 100%
+
+// --- / calculator --- //
