@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Прайс-лист
     </title>
-    <link rel="stylesheet" href="css/main.css?v=1586949427923">
+    <link rel="stylesheet" href="css/main.css?v=1586968196128">
   </head>
   <body>
     <div class="page">
@@ -74,7 +74,8 @@
         <div class="wrapper">
           <h1 class="page-title crawl-from-left">Стоимость тренировок</h1><br>
           <section class="calculator">
-            <h2 class="page-title crawl-from-left">Калькулятор</h2>
+            <!--h2.page-title.crawl-from-left Калькулятор-->
+            <p class="calculator__description">Выберите удобный вам сквош-клуб и другие параметры тренировки, чтобы узнать её стоимость:</p>
             <form>
               <fieldset id="block-club">
                 <div class="overlay"></div>
@@ -143,15 +144,15 @@
                   <label>
                     <input type="radio" name="players" value="three-players"><span>3 игрока</span>
                   </label>
-                  <!--label
-                  input(type='radio' name='players' value='four-players')
-                  span 4-6 игроков
-                  
-                  -->
+                  <label>
+                    <input type="radio" name="players" value="four-players"><span>4-6 игроков</span>
+                  </label>
                 </div>
               </fieldset>
               <fieldset>
                 <div class="price-wrap">Стоимость тренировки: <span class="price js-price">0</span>&nbsp;рублей</div>
+                <div class="price-wrap price-wrap--included hidden js-price-description-golf">В стоимость включено: услуги тренера, инвентарь и аренда корта.</div>
+                <div class="price-wrap price-wrap--included hidden js-price-description-other">В стоимость включено: услуги тренера и инвентарь. <span class="red">Аренда корта оплачивается отдельно</span>.</div>
               </fieldset>
               <button class="button" id="reset" type="reset">Рассчитать заново</button>
             </form>
@@ -352,8 +353,8 @@
         </div>
         <div class="developer"><span class="developer__title">Разработка сайта:</span><a class="developer__link" href="https://webalex.su" target="_blank">WebAlex</a></div>
       </footer>
-      <script src="js/vendor.js?v=1586949427923"></script>
-      <script src="js/main.js?v=1586949427923"></script>
+      <script src="js/vendor.js?v=1586968196128"></script>
+      <script src="js/main.js?v=1586968196128"></script>
     </div>
   </body>
 </html>

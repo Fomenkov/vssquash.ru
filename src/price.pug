@@ -9,7 +9,8 @@ block content
 		h1.page-title.crawl-from-left Стоимость тренировок
 		br
 		section.calculator
-			h2.page-title.crawl-from-left Калькулятор
+			//h2.page-title.crawl-from-left Калькулятор
+			p.calculator__description Выберите удобный вам сквош-клуб и другие параметры тренировки, чтобы узнать её стоимость:
 			form
 				fieldset#block-club
 					.overlay
@@ -74,12 +75,14 @@ block content
 						label
 							input(type='radio' name='players' value='three-players')
 							span 3 игрока
-						//label
+						label
 							input(type='radio' name='players' value='four-players')
 							span 4-6 игроков
 
 				fieldset
 					.price-wrap Стоимость тренировки: #[span.price.js-price 0]&nbsp;рублей
+					.price-wrap.price-wrap--included.hidden.js-price-description-golf В стоимость включено: услуги тренера, инвентарь и аренда корта.
+					.price-wrap.price-wrap--included.hidden.js-price-description-other В стоимость включено: услуги тренера и инвентарь. #[span.red Аренда корта оплачивается отдельно].
 				button#reset.button(type='reset') Рассчитать заново
 
 		br

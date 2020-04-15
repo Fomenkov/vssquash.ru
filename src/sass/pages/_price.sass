@@ -32,20 +32,29 @@
 		font-weight: 400
 		font-size: 14px
 
-
+@include bp($point-3)
+	.price
+		width: 100%
+		&__cell
+			padding-left: 10px
+			padding-right: 10px
 
 
 .price-sale
 	border: 1px solid silver
 	padding: 10px 20px
 	border-radius: 20px
-	margin-bottom: 20px
+	margin-bottom: 60px
 	&__wrapper
 		width: 90%
 		margin: 0 auto
 
 	&__title
 		color: red
+
+	@include bp($point-3)
+		&__title
+			text-align: center
 
 .dropdown
 	border: 1px solid silver
@@ -58,19 +67,14 @@
 		justify-content: space-between
 		align-items: center
 
-
-@media (max-width: $screen-md - 1) and (min-width: $screen-sm)
-	.price
-		width: 100%
-		&__cell
-			padding-left: 10px
-			padding-right: 10px
-
-@media (max-width: $screen-sm - 1)
-	.price
-		width: 100%
-		&__cell
-			padding-left: 10px
-			padding-right: 10px
+	@include bp($point-3)
+		&__header
+			flex-wrap: wrap
+			justify-content: center
+			h2
+				width: 100%
+				text-align: center
+		&__button
+			margin-bottom: 20px
 
 // --- / price page --- //

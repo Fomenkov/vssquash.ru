@@ -15,6 +15,10 @@
 
 	const buttonChildren = document.querySelector('input[value = "children"]');
 	const buttonTwoHours = document.querySelector('input[value = "two-hours"]');
+	const buttonFourPlayers = document.querySelector('input[value = "four-players"]');
+
+	const priceDescriptionGolf = document.querySelector('.js-price-description-golf');
+	const priceDescriptionOther = document.querySelector('.js-price-description-other');
 
 	const buttonReset = document.getElementById('reset');
 	const form = buttonReset.closest('form');
@@ -122,7 +126,6 @@
 		for (let i = 0; i < players.length; i++) {
 			players[i].addEventListener('click', function () {
 				playersValue = this.value;
-
 				switch (ageValue) {
 					case 'children':
 						if (playersValue === 'two-players') {
@@ -135,12 +138,39 @@
 						break;
 
 					case 'adults':
-						if (playersValue === 'two-players') {
-							playersMarkup = 300;
-						} else if (playersValue === 'three-players') {
-							playersMarkup = 500;
+						if (clubValue === 'golf' && durationValue === 'two-hours') {
+							switch (playersValue){
+								case 'one-player':
+									playersMarkup = -650;
+									break;
+								case 'two-players':
+									playersMarkup = 0;
+									break;
+								case 'three-players':
+									playersMarkup = 300;
+									break;
+								case 'four-players':
+									playersMarkup = 500;
+									break;
+							}
+						} else if (clubValue === 'golf' && durationValue === 'one-hour') {
+							switch (playersValue){
+								case 'one-player':
+									playersMarkup = 0;
+									break;
+								case 'two-players':
+									playersMarkup = 300;
+									break;
+								case 'three-players':
+									playersMarkup = 500;
+									break;
+							}
 						} else {
-							playersMarkup = 0;
+							if (playersValue === 'three-players') {
+								playersMarkup = 300;
+							} else {
+								playersMarkup = 0;
+							}
 						}
 						break;
 				}
@@ -148,6 +178,12 @@
 				madeButtonActive(this);
 				priceUpdate ();
 				price.innerHTML = priceValue;
+
+				if (clubValue === 'golf') {
+					priceDescriptionGolf.classList.remove('hidden');
+				} else {
+					priceDescriptionOther.classList.remove('hidden');
+				}
 			})
 		}
 	}
@@ -163,13 +199,10 @@
 	// Если нажата кнопка дети - скрываем кнопку 2 часа
 
 	function hiddenButtonHours() {
-		console.log('Функция сработала (возраст изменился)');
 		if (buttonChildren.checked) {
-			console.log('Кнопка Дети нажата');
 			buttonTwoHours.disabled = true;
 			buttonTwoHours.parentElement.classList.add('disabled');
 		} else {
-			console.log('Кнопка Взрослые нажата');
 			buttonTwoHours.disabled = false;
 			buttonTwoHours.parentElement.classList.remove('disabled');
 		}
@@ -179,10 +212,25 @@
 		age[i].addEventListener('change', hiddenButtonHours);
 	}
 
+	// Если клуб - "Гольф" и длительность 2 часа - открываем кнопку "4-6 игроков"
+
+	function hiddenButtonPlayers() {
+		if (clubValue === 'golf' && buttonTwoHours.checked) {
+			buttonFourPlayers.disabled = false;
+			buttonFourPlayers.parentElement.classList.remove('disabled');
+		} else {
+			buttonFourPlayers.disabled = true;
+			buttonFourPlayers.parentElement.classList.add('disabled');
+		}
+	}
+
+	for (let i = 0; i < duration.length; i++) {
+		duration[i].addEventListener('change', hiddenButtonPlayers);
+	}
+
 	//
 	function priceUpdate () {
 		priceValue = (basePrice + clubMarkup + dayMarkup + ageMarkup + playersMarkup) * durationMarkup;
-		console.log(`Прайс обновился, стало ${priceValue}`);
 	}
 
 	function cancelChecked(array) {
@@ -219,6 +267,8 @@
 		ageBlock.className = 'hidden';
 		durationBlock.className = 'hidden';
 		playersBlock.className = 'hidden';
+		priceDescriptionGolf.classList.add('hidden');
+		priceDescriptionOther.classList.add('hidden');
 
 		document.body.scrollTop = 0;
 	}
